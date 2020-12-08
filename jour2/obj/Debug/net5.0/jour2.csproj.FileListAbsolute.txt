@@ -1,0 +1,16 @@
+D:\Prog\AdventOfCode_2020\jour2\bin\Debug\net5.0\jour2.exe
+D:\Prog\AdventOfCode_2020\jour2\bin\Debug\net5.0\jour2.deps.json
+D:\Prog\AdventOfCode_2020\jour2\bin\Debug\net5.0\jour2.runtimeconfig.json
+D:\Prog\AdventOfCode_2020\jour2\bin\Debug\net5.0\jour2.runtimeconfig.dev.json
+D:\Prog\AdventOfCode_2020\jour2\bin\Debug\net5.0\jour2.dll
+D:\Prog\AdventOfCode_2020\jour2\bin\Debug\net5.0\ref\jour2.dll
+D:\Prog\AdventOfCode_2020\jour2\bin\Debug\net5.0\jour2.pdb
+D:\Prog\AdventOfCode_2020\jour2\obj\Debug\net5.0\jour2.csprojAssemblyReference.cache
+D:\Prog\AdventOfCode_2020\jour2\obj\Debug\net5.0\jour2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prog\AdventOfCode_2020\jour2\obj\Debug\net5.0\jour2.AssemblyInfoInputs.cache
+D:\Prog\AdventOfCode_2020\jour2\obj\Debug\net5.0\jour2.AssemblyInfo.cs
+D:\Prog\AdventOfCode_2020\jour2\obj\Debug\net5.0\jour2.csproj.CoreCompileInputs.cache
+D:\Prog\AdventOfCode_2020\jour2\obj\Debug\net5.0\jour2.dll
+D:\Prog\AdventOfCode_2020\jour2\obj\Debug\net5.0\ref\jour2.dll
+D:\Prog\AdventOfCode_2020\jour2\obj\Debug\net5.0\jour2.pdb
+D:\Prog\AdventOfCode_2020\jour2\obj\Debug\net5.0\jour2.genruntimeconfig.cache
