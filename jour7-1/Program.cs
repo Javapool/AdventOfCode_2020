@@ -17,15 +17,10 @@ namespace jour7_1
 
             while ((line = SR.ReadLine()) != null)
             {
-                line = Regex.Replace(line," bag(s*)\\.*", "");
+                line = Regex.Replace(line,@" bag(s*)\.*", "");
 
-                String[] splitInput = line.Split("contain ");
+                String[] splitInput = line.Split(" contain ");
                 String[] containedBags = splitInput[1].Split(", ");
-
-                foreach (String  str in containedBags)
-                {
-                    Console.WriteLine(str);
-                }
 
                 Bag mainBag = addBag(splitInput[0]);
                 foreach (String bag in containedBags)
@@ -43,10 +38,13 @@ namespace jour7_1
                 }
             }
 
-            foreach (Bag bag in possibleBags)
-            {
-                Console.WriteLine(bag.ToString());
-            }
+
+            Bag shinyGold = bagExists("shiny gold");
+            List<Bag> initialList = new List<Bag>();
+
+            List<Bag> finalList = shinyGold.getParentList(initialList);
+
+            Console.WriteLine(finalList.Count);
 
             Bag bagExists(String color)
             {
@@ -62,7 +60,7 @@ namespace jour7_1
 
             Bag addBag(String color){
                 Bag current = bagExists(color);
-                if(current ==null )
+                if(current == null )
                 {
                     current = new Bag(color);
                     possibleBags.Add(current);
@@ -100,12 +98,34 @@ namespace jour7_1
         }
 
         public override String ToString(){
-            String result = "Color-"+this.color+"\nChildren :\n";
+            String result = "Color-"+this.color+"-\nChildren :\n";
             foreach ((Bag,int) child in contains)
             {
-                result+="\t"+child.Item2+" "+child.Item1.getColor()+"\n";
+                result+="\t-"+child.Item2+"- -"+child.Item1.getColor();
             }
+            result +="-\nParents:\n";
+            foreach (Bag bag in containedBy)
+            {
+                result+="\t"+bag.getColor()+"\n";
+            }
+            
             return result;
+        }
+
+        public List<Bag> getParentList(List<Bag> initialList)
+        {
+            foreach (Bag parent in this.containedBy)
+            {
+                if(initialList.Contains(parent)==false)
+                {
+                    initialList.Add(parent);
+                    initialList = parent.getParentList(initialList);
+                }
+            }
+
+
+            return initialList;
+
         }
     }
 }
