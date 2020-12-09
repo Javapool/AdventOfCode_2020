@@ -40,7 +40,6 @@ namespace jour8_1
 
             foreach (int i in shadowInstructions)
             {
-                Console.WriteLine((i+1) + "---" + instructions[i]);
                 if(debugProgram(programSize, instructions, values, i))
                 {
                     Console.WriteLine("Victory!!" + (i+1));
@@ -99,6 +98,11 @@ namespace jour8_1
                             break;
                     }
                 }
+            }
+
+            if(run==true)
+            {
+                Console.WriteLine("Correct Accumulator = " + accumulator);
             }
             return run;
             
