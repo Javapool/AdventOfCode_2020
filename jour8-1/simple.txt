@@ -1,0 +1,5 @@
+acc -17
+nop +318
+jmp +1
+acc -10
+jmp +394

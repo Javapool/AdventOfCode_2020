@@ -45,6 +45,7 @@ namespace jour7_1
             List<Bag> finalList = shinyGold.getParentList(initialList);
 
             Console.WriteLine(finalList.Count);
+            Console.WriteLine(shinyGold.getSubBagCount());
 
             Bag bagExists(String color)
             {
@@ -101,7 +102,7 @@ namespace jour7_1
             String result = "Color-"+this.color+"-\nChildren :\n";
             foreach ((Bag,int) child in contains)
             {
-                result+="\t-"+child.Item2+"- -"+child.Item1.getColor();
+                result+="\t-"+child.Item2+"- -"+child.Item1.getColor()+"-";
             }
             result +="-\nParents:\n";
             foreach (Bag bag in containedBy)
@@ -123,7 +124,19 @@ namespace jour7_1
                 }
             }
             return initialList;
+        }
 
+        public int getSubBagCount()
+        {   
+            int count = 1;
+
+            foreach((Bag,int) bag in this.contains)
+            {
+                Console.WriteLine(bag.Item1.ToString());
+                count+=(bag.Item2*bag.Item1.getSubBagCount());
+            }
+
+            return count;
         }
     }
 }
